@@ -1,0 +1,406 @@
+//Login Page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | V Shopping</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: #f5f5f5;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            width: 90%;
+            margin: 10px 0;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 25px;
+            background-color: #222;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #444;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login to V Shopping</h2>
+    <input type="text" id="username" placeholder="Username"><br>
+    <input type="password" id="password" placeholder="Password"><br>
+    <button onclick="login()">Login</button>
+    <p id="error" class="error"></p>
+</div>
+
+<script>
+    function login() {
+        const user = document.getElementById("username").value;
+        const pass = document.getElementById("password").value;
+
+        // Simple login logic (for demo only)
+        if (user === "vshop" && pass === "1234") {
+            window.location.href = "index.html";
+        } else {
+            document.getElementById("error").textContent = "Invalid username or password!";
+        }
+    }
+</script>
+
+</body>
+</html>
+
+//Home Page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V Shopping | Home</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            padding: 30px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #444;
+            font-weight: bold;
+        }
+        header, footer {
+            background: #222;
+            color: #fff;
+            padding: 15px;
+        }
+        img {
+            width: 300px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to V Shopping</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<main>
+    <h2>EXPLORE THE BEST DEALS ON FASHION, GADEGETS, AND MORE!</h2>
+
+    <!-- Image as a Link -->
+    <a href="products.html">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/010/927/291/small_2x/shop-now-button-with-shopping-cart-online-shopping-sign-shop-now-symbol-flat-style-vector.jpg" alt="Shop Now" width="50" height="50">
+    </a>
+
+    <!-- Audio -->
+    <h3>SHOP WITH A VIBE</h3>
+    <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        Your browser does not support audio.
+    </audio>
+
+    <!-- Video -->
+    <h3>WATCH THIS!</h3>
+    <video width="320" height="240" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video></br>
+    
+    <!-- Location -->
+    <h3>LOCATION</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!..." width="400" height="400" style="border:0;"></iframe>
+</main>
+
+<footer>
+    <p>&copy; 2025 V Shopping</p>
+</footer>
+
+</body>
+</html>
+
+//Product Page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V Shopping | Products</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f9f9f9;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: #fff;
+            width: 250px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            margin: 10px 0 5px;
+        }
+
+        .card p {
+            font-weight: bold;
+            color: #444;
+        }
+
+        .card button {
+            background-color: #222;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Our Products</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<section class="products">
+    <div class="card">
+        <img src="https://via.placeholder.com/250x180.png?text=Smartphone" alt="Smartphone">
+        <h3>Smartphone Pro X</h3>
+        <p>₹29,999</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/250x180.png?text=Smartwatch" alt="Smartwatch">
+        <h3>Smartwatch Neo</h3>
+        <p>₹7,499</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/250x180.png?text=Headphones" alt="Headphones">
+        <h3>Noise Cancelling Headphones</h3>
+        <p>₹5,299</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/250x180.png?text=Sneakers" alt="Sneakers">
+        <h3>Sporty Sneakers</h3>
+        <p>₹3,299</p>
+        <button>Add to Cart</button>
+    </div>
+</section>
+
+</body>
+</html>
+
+//Cart Page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V Shopping | Cart</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        table {
+            width: 90%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .total-row td {
+            font-weight: bold;
+            background-color: #f9f9f9;
+        }
+
+        #location {
+            margin-top: 30px;
+            text-align: center;
+            color: green;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #222;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Your Shopping Cart</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+    </nav>
+</header>
+
+<main>
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Price (₹)</th>
+            <th>Quantity</th>
+            <th>Subtotal (₹)</th>
+        </tr>
+        <tr>
+            <td>Smartphone Pro X</td>
+            <td>29999</td>
+            <td>1</td>
+            <td>29999</td>
+        </tr>
+        <tr>
+            <td>Smartwatch Neo</td>
+            <td>7499</td>
+            <td>2</td>
+            <td>14998</td>
+        </tr>
+        <tr>
+            <td>Sporty Sneakers</td>
+            <td>3299</td>
+            <td>1</td>
+            <td>3299</td>
+        </tr>
+        <tr class="total-row">
+            <td colspan="3">Total</td>
+            <td>₹48,296</td>
+        </tr>
+    </table>
+
+    <button onclick="getLocation()">Get Delivery Location</button>
+    <p id="location"></p>
+</main>
+
+<script>
+    function getLocation() {
+        const output = document.getElementById("location");
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    output.textContent = `Your Location → Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`;
+                },
+                () => {
+                    output.textContent = "Unable to retrieve your location.";
+                }
+            );
+        } else {
+            output.textContent = "Geolocation not supported by your browser.";
+        }
+    }
+</script>
+
+</body>
+</html>
