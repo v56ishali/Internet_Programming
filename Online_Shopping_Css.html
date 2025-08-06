@@ -1,0 +1,603 @@
+<!--Login Page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | V Shopping</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #f5f5f5;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 350px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        input {
+            padding: 10px;
+            width: 90%;
+            margin: 10px 0;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 25px;
+            background-color: #222;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <!-- 👇 Add your logo image here -->
+    <img src="https://thumbs.dreamstime.com/b/shopping-bag-logo-letter-v-store-branding-emblem-vector-online-bags-letters-business-logos-design-template-223076447.jpg" alt="V Shopping Logo" class="logo">
+
+    <h2>Login to V Shopping</h2>
+    <input type="text" id="username" placeholder="Username"><br>
+    <input type="password" id="password" placeholder="Password"><br>
+    <button onclick="login()">Login</button>
+    <p id="error" class="error"></p>
+</div>
+
+<script>
+    function login() {
+        const user = document.getElementById("username").value;
+        const pass = document.getElementById("password").value;
+
+        // Simple login logic (for demo only)
+        if (user === "vshop" && pass === "1234") {
+            window.location.href = "file:///C:/Users/USER/Desktop/IP/EX_03/home.html";
+        } else {
+            document.getElementById("error").textContent = "Invalid username or password!";
+        }
+    }
+</script>
+
+</body>
+</html>
+<!--Home Page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>V Shopping | Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffffff, #f2f6ff);
+      color: #333;
+    }
+
+    header {
+      background-color: #001f3f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #0059b3;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    #intro {
+      background-color: #e6f7ff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    #intro h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    .shop-now {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .shop-now img {
+      width: 300px;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .shop-now img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    h3 {
+      margin: 30px 0 10px;
+      font-size: 1.3rem;
+      color: #002244;
+    }
+
+    audio, video {
+      margin-top: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      margin-top: 15px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      width: 100%;
+      height: 400px;
+    }
+
+    footer {
+      background-color: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to V Shopping</h1>
+    <nav>
+      <a href="file:///C:/Users/USER/Desktop/IP/EX_03/home.html">Home</a>
+      <a href="file:///C:/Users/USER/Desktop/IP/EX_03/product.html">Products</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Intro Section -->
+    <section id="intro">
+      <h2>Discover Exclusive Deals on Fashion, Gadgets & More!</h2>
+      <div class="shop-now">
+        <a href="products.html">
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/010/927/291/small_2x/shop-now-button-with-shopping-cart-online-shopping-sign-shop-now-symbol-flat-style-vector.jpg" alt="Shop Now">
+        </a>
+      </div>
+    </section>
+
+    <!-- Audio Section -->
+    <section>
+      <h3>Shop with a Vibe 🎶</h3>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+      </audio>
+    </section>
+
+    <!-- Video Section -->
+    <section>
+      <h3>Watch our clip 🎥</h3>
+      <video width="100%" height="240" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Location Section -->
+    <section>
+      <h3>Our Store Location 📍</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 V Shopping. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+<!--Product Page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V Shopping | Products</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom right, #f8f9fc, #e3e8f0);
+            padding: 20px;
+            color: #333;
+        }
+
+        header {
+            background-color: #001f3f;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: #fff;
+            width: 260px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            object-fit: cover;
+            height: 200px;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 12px;
+        }
+
+        .card button {
+            background: #001f3f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .card button:hover {
+            background: #004080;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 15px;
+            background-color: #001f3f;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Explore Our Trending Products</h1>
+    <nav>
+        <a href="file:///C:/Users/USER/Desktop/IP/EX_03/home.html">Home</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<section class="products">
+    <div class="card">
+        <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202212/best_phones_under_rs_25000-sixteen_nine.png?VersionId=Nzw0QHCHCyDE8AYUQ5rAauEQ9NI2tjW1&size=690:388" alt="Smartphone">
+        <h3>Smartphone Pro X</h3>
+        <p>₹29,999</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://www.fireboltt.com/cdn/shop/files/Artboard_3_a68759e3-547f-483a-b5cc-edd19048edb8.jpg?v=15443021819480988654" alt="Smartwatch">
+        <h3>Smartwatch Neo</h3>
+        <p>₹7,499</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://shoopy.b-cdn.net/305289/SKU-1621_0-1730978221394.webp?format=webp" alt="Headphones">
+        <h3>Noise Cancelling Headphones</h3>
+        <p>₹5,299</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://www.jiomart.com/images/product/original/rvts4wxts1/dexture-air-jordan-style-trendy-sneakers-for-men-blue-product-images-rvts4wxts1-0-202305310827.jpg?im=Resize=(500,630)" alt="Sneakers">
+        <h3>Sporty Sneakers</h3>
+        <p>₹3,299</p>
+        <button>Add to Cart</button>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 V Shopping. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+<!--Cart Page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V Shopping | Cart</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            padding: 30px;
+        }
+
+        header {
+            background: #001f3f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #ffd700;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid #ddd;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .summary {
+            text-align: right;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        button {
+            display: inline-block;
+            background-color: #001f3f;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #003366;
+        }
+
+        #location {
+            margin-top: 20px;
+            font-size: 0.95rem;
+            color: green;
+            font-weight: 500;
+            border-left: 4px solid green;
+            padding-left: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            background: #001f3f;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Your Cart</h1>
+    <nav>
+        <a href="index.html">Back to Home</a>
+        <a href="products.html">Back to Products</a>
+    </nav>
+</header>
+
+<main>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price (₹)</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Wireless Earbuds</td>
+                <td>₹3,499</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Smart Watch</td>
+                <td>₹7,999</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="summary">Subtotal: ₹11,498</div>
+
+    <br><br>
+    <button onclick="getLocation()">Get Delivery Location</button>
+    <p id="location"></p>
+</main>
+
+<footer>
+    <p>&copy; 2025 V Shopping. All rights reserved.</p>
+</footer>
+
+<script>
+    function getLocation() {
+        const locationBox = document.getElementById("location");
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            locationBox.textContent = "Geolocation not supported by your browser.";
+            locationBox.style.color = "red";
+        }
+    }
+
+    function showPosition(position) {
+        const lat = position.coords.latitude.toFixed(4);
+        const lon = position.coords.longitude.toFixed(4);
+        document.getElementById("location").innerHTML = `📍 Location fetched successfully:<br>Latitude: ${lat}, Longitude: ${lon}`;
+    }
+
+    function showError(error) {
+        const locationBox = document.getElementById("location");
+        locationBox.style.color = "red";
+        locationBox.textContent = "Unable to retrieve your location.";
+    }
+</script>
+
+</body>
+</html>
